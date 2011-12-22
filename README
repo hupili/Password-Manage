@@ -1,0 +1,12 @@
+The project gather password manage solutions. 
+
+>> Motivation
+
+With the leak of CSDN password, people start to think
+and reconstruct their password management solution:
+toolset, policy, operational guide, etc. 
+
+This project aims at gathering the following things:
+1. Relevant books, papers, blogposts, etc. 
+2. Facility tools. 
+3. Executive summary. 
