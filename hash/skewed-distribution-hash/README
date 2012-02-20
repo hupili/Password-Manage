@@ -1,0 +1,36 @@
+This branch conducts experiments on the skewed
+distribution hash. 
+
+>> Basic Idea
+
+Uniform output distribution is one requirement 
+for a "good" hash function as is known to all. 
+How about introducing some skewness into hash 
+function??
+
+The three level of "one-way" property:
+   1. Computationally infeasible to find inverse
+      function. 
+   2. Computationally infeasible to construct 
+      targeted collision. That is, given x, it's
+      hard to find y, s.t. H(x)==H(y). 
+   3. Computationally infeasible to construct 
+      collision. That is, it's hard to find a 
+      pair (x,y), s.t. H(x)==H(y). 
+
+For 1, since most hash functions are multiple 
+to 1 mapping and the input length can usually 
+be several order larger than output length. It's
+of course impossible to find the inverse function. 
+This "weak one-way" property is naturally satisfied. 
+
+For 2 and 3, under the uniform output assumption, 
+and for the scenario of birthday attack, they're 
+addressing more or less the same issue. The key 
+concept is, by generating enough messages, you'll 
+almost for sure observe a collision. By doing this 
+for enough amount, you can even target a message. 
+The complexity for both tasks is positively related. 
+
+What happens when the distribution is skewed?
+
